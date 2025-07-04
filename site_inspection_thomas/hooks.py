@@ -8,6 +8,47 @@ app_license = "mit"
 # Apps
 # ------------------
 
+
+
+
+fixtures = [
+    {
+      "dt": "Custom Field",
+      "filters": [
+        [
+          "name",
+          "in",
+          (
+            "Quotation-custom_section_break_boxlq",
+            "Quotation-custom_sales_person"
+          ),
+        ]
+      ],
+    },
+    {
+      "dt": "Property Setter",
+      "filters": [
+          [
+            "doc_type",
+            "in",
+            (
+              "Quotation"
+            ),
+          ]
+      ],
+    }
+    
+]
+
+
+
+
+
+
+
+
+
+
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page

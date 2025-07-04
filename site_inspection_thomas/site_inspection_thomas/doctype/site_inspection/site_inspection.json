@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-03 22:42:22.045925",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "quotation",
+  "column_break_gfnx",
+  "inspection_date",
+  "section_break_ebvb",
+  "customer",
+  "column_break_acig",
+  "status",
+  "section_break_dzaw",
+  "inspection_notes",
+  "items",
+  "create_followup_task",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_dzaw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "quotation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Quotation",
+   "link_filters": "[[\"Quotation\",\"quotation_to\",\"=\",\"Customer\"]]",
+   "options": "Quotation",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "quotation.party_name",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nUnder Review\nCompleted"
+  },
+  {
+   "fieldname": "inspection_notes",
+   "fieldtype": "Text",
+   "label": "Inspection Notes"
+  },
+  {
+   "default": "0",
+   "fieldname": "create_followup_task",
+   "fieldtype": "Check",
+   "label": "Create Followup Task"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Site Inspection",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Inspection Feedback"
+  },
+  {
+   "fieldname": "column_break_gfnx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ebvb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_acig",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "inspection_date",
+   "fieldtype": "Date",
+   "label": "Inspection Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-07-04 15:40:14.264021",
+ "modified_by": "Administrator",
+ "module": "Site Inspection Thomas",
+ "name": "Site Inspection",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

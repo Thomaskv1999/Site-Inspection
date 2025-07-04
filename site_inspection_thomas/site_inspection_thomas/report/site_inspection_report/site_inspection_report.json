@@ -1,0 +1,30 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2025-07-04 10:53:50.879413",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "test",
+ "letterhead": null,
+ "modified": "2025-07-04 14:27:14.748467",
+ "modified_by": "Administrator",
+ "module": "Site Inspection Thomas",
+ "name": "Site Inspection Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT si.name as \"Quotation\",ifr.item_name as \"Items\",ifr.inspection_rating as \"Inspection Rating\",si.create_followup_task as \"Follow-up status\"\nFROM `tabSite Inspection`as si\nLEFT JOIN\n\t\t`tabInspection Feedback` as ifr ON ifr.parent = si.name",
+ "ref_doctype": "Site Inspection",
+ "report_name": "Site Inspection Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}
